@@ -253,3 +253,6 @@ React Hook 일의 순서
 - useState 은 함수에서 상태 관리를 할 수 있게 해주는 훅이다. 첫 번째 상태를 정할 수 있고 유동적으로 value를 관리 할 수 있다.
 - 이전에 value를 사용하려면 이전에 상태를 받아와야 한다. ex) setMessage(prev⇒ prev + currentVal);
 - 이전에 value와 같은 값을 사용하면 re-render되지 않는다.
+
+참고:
+<a href="https://blog.logrocket.com/a-guide-to-usestate-in-react-ecb9952e406c/">https://blog.logrocket.com/a-guide-to-usestate-in-react-ecb9952e406c/<a/>
