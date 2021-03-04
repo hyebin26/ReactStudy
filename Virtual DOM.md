@@ -1,4 +1,4 @@
-#Virtual DOM
+# Virtual DOM
 
 ### 브라우저의 WorkFlow
 
