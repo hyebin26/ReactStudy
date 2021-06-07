@@ -66,10 +66,9 @@ Redux Toolkit에서 Immer를 사용할 때 알아야 할 몇 가지 유용한 �
 
 ### Mutating and Returning State
 
-Immer는 중복된 필드에 할당하거나 value를 복제하는 함수를 호출함으로써 존재하는 초안 state 값을 복제하는 것의 시도를 추적하면서 작동한다.  그것은 상태는 변화의 시도를 Immer가 보기위해 반드시 JS객체 또는 배열이여야 한다.( slice state를 문자열 또는 boolean 같은 원시타입으로 가질 수 있다. 하지만 원시타입은 절대로 복제될 수 없다. 너가 할 수 있는 것은 새로운 value를 리턴하는 것이다.)
+Immer는 중복된 필드에 할당하거나 value를 복제하는 함수를 호출하거나 이미 존재하는 초안 상태 값을 복제하는 시도를 추적하면서 작동한다.  그것은 state는 Immer가 변화의 시도를 보기위해 반드시 JS객체 또는 배열이여야 한다는 것을 의미한다.( slice state를 문자열 또는 boolean 같은 원시타입으로 가질 수 있다. 하지만 원시타입은 절대로 복제될 수 없다. 너가 할 수 있는 것은 새로운 value를 리턴하는 것이다.)
 
 어떤 리듀서의 경우에도, Immer는 존재하는 state를 복재하거나 너 스스로 새로운 value를 구성하고 이것을 리턴하는 것을 기대한다. 그러나 같은 함수에서는 아니다. 예를 들면,
-
 ```jsx
 const todoSlice = createSlice({
 	name: "todos",
